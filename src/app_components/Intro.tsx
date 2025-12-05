@@ -20,8 +20,9 @@ const Intro = () => {
       <Box
         p={"2rem"}
         w={"100%"}
-        bg={"rgba(33, 34, 35, .8)"}
+        bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
+        mb={'3rem'}
       >
         <Stack alignItems={"flex-start"} gap={"1.5rem"}>
           <Flex
