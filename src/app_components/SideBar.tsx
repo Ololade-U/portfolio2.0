@@ -43,7 +43,7 @@ const SideBar = () => {
           </Heading>
           <TextRotator />
         </Flex>
-        <Separator borderColor={"#565656ff"} w={"80%"} />
+        <Separator borderColor={"#3d3d3dff"} w={"80%"} />
         <Box
           display={"flex"}
           mb={".9rem"}
@@ -101,7 +101,7 @@ const SideBar = () => {
                 value={90}
                 colorPalette={"green"}
               >
-                <ProgressCircle.Circle css={{ "--thickness": "3px" }}>
+                <ProgressCircle.Circle css={{ "--thickness": "2px" }}>
                   <ProgressCircle.Track />
                   <ProgressCircle.Range />
                 </ProgressCircle.Circle>
@@ -122,7 +122,7 @@ const SideBar = () => {
                 value={80}
                 colorPalette={"green"}
               >
-                <ProgressCircle.Circle css={{ "--thickness": "3px" }}>
+                <ProgressCircle.Circle css={{ "--thickness": "2px" }}>
                   <ProgressCircle.Track />
                   <ProgressCircle.Range />
                 </ProgressCircle.Circle>
@@ -143,7 +143,7 @@ const SideBar = () => {
                 value={60}
                 colorPalette={"green"}
               >
-                <ProgressCircle.Circle css={{ "--thickness": "3px" }}>
+                <ProgressCircle.Circle css={{ "--thickness": "2px" }}>
                   <ProgressCircle.Track />
                   <ProgressCircle.Range />
                 </ProgressCircle.Circle>
@@ -164,7 +164,7 @@ const SideBar = () => {
                 value={65}
                 colorPalette={"green"}
               >
-                <ProgressCircle.Circle css={{ "--thickness": "3px" }}>
+                <ProgressCircle.Circle css={{ "--thickness": "2px" }}>
                   <ProgressCircle.Track />
                   <ProgressCircle.Range />
                 </ProgressCircle.Circle>
