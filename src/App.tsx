@@ -12,10 +12,10 @@ const App = () => {
         <Box h={"100%"}>
           <SideBar />
         </Box>
-        <Box zIndex={'2000'} h="100%" pt={'4rem'} overflowY={'auto'} scrollbar={'hidden'}>
+        <Box zIndex={'1000'} h="100%" pt={'4rem'} overflowY={'auto'} scrollbar={'hidden'}>
           <MainPage/>
         </Box>
-        <Box h="100%">
+        <Box zIndex={'2500'} h="100%">
           <NavBar />
         </Box>
       </Grid>

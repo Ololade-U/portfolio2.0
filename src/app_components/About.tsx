@@ -1,10 +1,17 @@
+import { useObserve } from "../hooks/Observe";
 import { Box, Flex, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import { IoMdPerson } from "react-icons/io";
+import useStoreQuery from "./Store";
 
 const About = () => {
+  const { componentRef, isInView } = useObserve();
+  const setActive = useStoreQuery((s) => s.setActiveNav);
+  isInView && setActive("About");
+
   return (
     <>
       <Box
+        ref={componentRef}
         p={"2rem"}
         w={"100%"}
         bg={"rgba(33, 34, 35, .95)"}
@@ -30,14 +37,14 @@ const About = () => {
               color={"white"}
               display={"flex"}
               gap={".4rem"}
-              fontSize={"3xl"}
+              fontSize={"4xl"}
             >
               About{" "}
-              <Heading fontSize={"3xl"} fontWeight={"bold"} color={"#00BC91"}>
+              <Heading fontSize={"4xl"} fontWeight={"bold"} color={"#00BC91"}>
                 Me
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={'1.1rem'}>
+            <Text color={"#999999"} fontSize={"1.1rem"}>
               Seasoned business professional with over a decade years of
               experience in co-founding and scaling startups across EdTech,
               AgriTech, and FinTech sectors. Proven track record in driving

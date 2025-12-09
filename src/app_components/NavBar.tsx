@@ -23,17 +23,18 @@ import { IoMdShare } from "react-icons/io";
 import { Tooltip } from "../components/ui/tooltip";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import useStoreQuery from "./Store";
 
 const NavBar = () => {
-  const [active, setActive] = useState("");
+  // const [active, setActive] = useState("");
+
+  const active = useStoreQuery((s) => s.activeNav);
+  const setActive = useStoreQuery((s) => s.setActiveNav);
 
   const [open, setOpen] = useState(false);
   const timerRef = useRef(0);
-  const closeDelay = 150; // Delay in milliseconds before closing
+  const closeDelay = 150;
 
-  // --- Handlers ---
-
-  // Clears any closing timeout and opens the menu immediately
   const handleMouseEnter = () => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
@@ -41,7 +42,6 @@ const NavBar = () => {
     setOpen(true);
   };
 
-  // Sets a timeout to close the menu
   const handleMouseLeave = () => {
     timerRef.current = setTimeout(() => {
       setOpen(false);
@@ -108,6 +108,7 @@ const NavBar = () => {
             p={".5rem"}
             cursor={"pointer"}
             _hover={{ bg: "rgba(250,250,250,.2)" }}
+            bg={active === "Home" ? "rgba(250,250,250,.2)" : ""}
             onMouseEnter={() => setActive("Home")}
             onMouseLeave={() => setActive("")}
           >
@@ -138,6 +139,7 @@ const NavBar = () => {
             p={".5rem"}
             cursor={"pointer"}
             _hover={{ bg: "rgba(250,250,250,.2)" }}
+            bg={active === "About" ? "rgba(250,250,250,.2)" : ""}
             onMouseEnter={() => setActive("About")}
             onMouseLeave={() => setActive("")}
           >
@@ -167,6 +169,7 @@ const NavBar = () => {
             alignContent={"center"}
             p={".5rem"}
             cursor={"pointer"}
+            bg={active === "Service" ? "rgba(250,250,250,.2)" : ""}
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Service")}
             onMouseLeave={() => setActive("")}

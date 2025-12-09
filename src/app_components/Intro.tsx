@@ -13,16 +13,23 @@ import main from "../assets/main logo.webp";
 import { FaCheckDouble } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import myPic from "../assets/MyPicture2.png";
+import { useObserve } from "../hooks/Observe";
+import useStoreQuery from "./Store";
 
 const Intro = () => {
+  const { componentRef, isInView } = useObserve();
+  const setActive = useStoreQuery((s) => s.setActiveNav);
+  isInView && setActive("Home");
+
   return (
     <>
       <Box
+        ref={componentRef}
         p={"2rem"}
         w={"100%"}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
-        mb={'3rem'}
+        mb={"3rem"}
       >
         <Stack alignItems={"flex-start"} gap={"1.5rem"}>
           <Flex
@@ -45,14 +52,14 @@ const Intro = () => {
             <Flex flexDirection={"column"} gap={"1.5rem"}>
               <Image src={main} w={"15rem"} />
               <Heading
-                fontSize={"3xl"}
+                fontSize={"4xl"}
                 fontWeight={"bold"}
                 color={"white"}
                 lineHeight={1}
               >
                 Bringing Your <br />{" "}
                 <Heading
-                  fontSize={"3xl"}
+                  fontSize={"4xl"}
                   fontWeight={"bold"}
                   color={"#00BC91"}
                   lineHeight={1}
