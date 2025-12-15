@@ -200,6 +200,7 @@ const NavBar = () => {
             alignContent={"center"}
             p={".5rem"}
             cursor={"pointer"}
+            bg={active === "Skills" ? "rgba(250,250,250,.2)" : ""}
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Skills")}
             onMouseLeave={() => setActive("")}
@@ -230,6 +231,7 @@ const NavBar = () => {
             alignContent={"center"}
             p={".5rem"}
             cursor={"pointer"}
+            bg={active === "Resume" ? "rgba(250,250,250,.2)" : ""}
             _hover={{ bg: "rgba(250,250,250,.2)" }}
             onMouseEnter={() => setActive("Resume")}
             onMouseLeave={() => setActive("")}

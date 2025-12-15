@@ -2,10 +2,10 @@ import  { useState, useEffect } from 'react';
 import './TextRotator.css';
 
 const TEXTS = [
-  "Graphic Designer",
-  "Web Developer",
-  "Product Designer",
-  "UI/UI Designer",
+  "Entrepreneur",
+  "Project Manager",
+  "Business Analyst",
+  "Strategic Planner",
 ];
 
 const ROTATION_INTERVAL = 3000;

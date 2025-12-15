@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, HStack, Stack, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PiToolboxFill } from "react-icons/pi";
 import { SlRocket } from "react-icons/sl";
 import { PiStrategyThin } from "react-icons/pi";
@@ -12,7 +12,13 @@ const Services = () => {
   const [active, setActive] = useState(0);
   const { componentRef, isInView } = useObserve();
   const setActiveNav = useStoreQuery((s) => s.setActiveNav);
-  isInView && setActiveNav("Service");
+  useEffect(() => {
+    if (isInView) {
+      setActiveNav("Service");
+    }
+    // Dependency array: runs only when isInView or setActiveNav changes.
+    // setActiveNav is usually stable (part of the store), so it effectively runs only on isInView changes.
+  }, [isInView, setActiveNav]);
   return (
     <>
       <Box

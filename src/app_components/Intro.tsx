@@ -12,14 +12,19 @@ import { IoHome } from "react-icons/io5";
 import main from "../assets/main logo.webp";
 import { FaCheckDouble } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
-import myPic from "../assets/MyPicture2.png";
+import myPic from "../assets/Oscar.jpg";
 import { useObserve } from "../hooks/Observe";
 import useStoreQuery from "./Store";
+import { useEffect } from "react";
 
 const Intro = () => {
   const { componentRef, isInView } = useObserve();
   const setActive = useStoreQuery((s) => s.setActiveNav);
-  isInView && setActive("Home");
+  useEffect(() => {
+    if (isInView) {
+      setActive("Home");
+    }
+  }, [isInView, setActive]);
 
   return (
     <>
@@ -68,9 +73,9 @@ const Intro = () => {
                 </Heading>{" "}
               </Heading>
               <Text color={"#999999"} maxW={"40ch"}>
-                Welcome to the official website of Uthman Adebayo, a
-                multidisciplinary specialist in product design, graphics & web
-                design, software engineering, project management, and IT
+                Welcome to the official website of Oscar Obiora, a
+                multidisciplinary specialist in project management, strategic
+                planning, entrepreneurship, business strategy and IT
                 consultancy.
               </Text>
               <HStack gap={"2rem"}>

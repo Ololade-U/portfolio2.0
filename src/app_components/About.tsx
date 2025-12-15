@@ -2,11 +2,16 @@ import { useObserve } from "../hooks/Observe";
 import { Box, Flex, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 import { IoMdPerson } from "react-icons/io";
 import useStoreQuery from "./Store";
+import { useEffect } from "react";
 
 const About = () => {
   const { componentRef, isInView } = useObserve();
   const setActive = useStoreQuery((s) => s.setActiveNav);
-  isInView && setActive("About");
+  useEffect(() => {
+        if (isInView) {
+            setActive("About");
+        }
+    }, [isInView, setActive]);
 
   return (
     <>
