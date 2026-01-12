@@ -11,7 +11,7 @@ const MainPage = () => {
       <About />
       <Services />
       <Skills />
-      <Resume />
+      {/* <Resume /> */}
     </>
   );
 };

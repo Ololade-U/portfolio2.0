@@ -46,7 +46,7 @@ const Skills: React.FC<SkillsProps> = () => {
   const skillItemRef: RefObject<HTMLDivElement | null> =
     useRef<HTMLDivElement | null>(null);
 
-  const scrollDistance: number = 210;
+  const scrollDistance: number = 180;
 
   useEffect(() => {
     if (scrollViewportRef.current && skillItemRef.current) {
@@ -101,10 +101,10 @@ const Skills: React.FC<SkillsProps> = () => {
       <Box
         ref={componentRef}
         p={"2rem"}
-        w={"100%"}
+        // w={{mdDown : '93vw'}}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
-        mb={"3rem"}
+        mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
         overflowX={"hidden"}
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
@@ -151,7 +151,7 @@ const Skills: React.FC<SkillsProps> = () => {
                 </Text>
               </Box>
 
-              <Flex alignItems={"center"} gap={"1rem"}>
+              <Flex hideBelow={'md'} alignItems={"center"} gap={"1rem"}>
                 <Box
                   border={"1px solid #999999"}
                   p={".7rem .9rem"}
@@ -235,7 +235,7 @@ const Skills: React.FC<SkillsProps> = () => {
                         <Flex
                           ref={index === 0 ? skillItemRef : null}
                           key={skill.name}
-                          minW={"180px"}
+                          minW={{mdTo2xl : "170px", mdDown : '200px'}}
                           flexDirection={"column"}
                           gap={"4rem"}
                           alignItems={"center"}
@@ -270,6 +270,72 @@ const Skills: React.FC<SkillsProps> = () => {
               </ScrollArea.Viewport>
               <ScrollArea.Corner />
             </ScrollArea.Root>
+
+            <Flex hideFrom={'md'} justifyContent={'center'} alignItems={"center"} gap={"1rem"}>
+                <Box
+                  border={"1px solid #999999"}
+                  p={".7rem .9rem"}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  borderRadius={"50%"}
+                  cursor={currentScrollIndex > 1 ? "pointer" : "not-allowed"}
+                  opacity={currentScrollIndex > 1 ? 1 : 0.5}
+                  _hover={currentScrollIndex > 1 ? { bg: "#00BC91" } : {}}
+                  onMouseEnter={() => setLeftActive(true)}
+                  onMouseLeave={() => setLeftActive(false)}
+                  onClick={handleScrollLeft}
+                  transitionProperty={"background"}
+                  transitionDuration={".2s"}
+                >
+                  <FaArrowLeftLong
+                    fill={
+                      leftActive && currentScrollIndex > 1 ? "white" : "#999999"
+                    }
+                    size={"1.1rem"}
+                  />
+                </Box>
+                <Box display={"flex"} alignItems={"center"}>
+                  <Text color={"#00BC91"} fontSize={".8rem"}>
+                    {currentScrollIndex}
+                  </Text>
+                  <Text color={"white"} fontSize={".8rem"}>
+                    /{maxScrollIndex}
+                  </Text>
+                </Box>
+
+                <Box
+                  border={"1px solid #999999"}
+                  p={".7rem .9rem"}
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  borderRadius={"50%"}
+                  cursor={
+                    currentScrollIndex < maxScrollIndex
+                      ? "pointer"
+                      : "not-allowed"
+                  }
+                  opacity={currentScrollIndex < maxScrollIndex ? 1 : 0.5}
+                  _hover={
+                    currentScrollIndex < maxScrollIndex ? { bg: "#00BC91" } : {}
+                  }
+                  onMouseEnter={() => setRightActive(true)}
+                  onMouseLeave={() => setRightActive(false)}
+                  onClick={handleScrollRight}
+                  transitionProperty={"background"}
+                  transitionDuration={".2s"}
+                >
+                  <FaArrowRightLong
+                    fill={
+                      rightActive && currentScrollIndex < maxScrollIndex
+                        ? "white"
+                        : "#999999"
+                    }
+                    size={"1.1rem"}
+                  />
+                </Box>
+              </Flex>
           </Flex>
         </Stack>
       </Box>

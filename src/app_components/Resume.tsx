@@ -147,7 +147,7 @@ const Resume = () => {
       <Box
         ref={componentRef}
         p={"2rem"}
-        w={"100%"}
+        w={{mdDown : "100vw"}}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={"3rem"}

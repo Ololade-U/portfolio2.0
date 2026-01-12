@@ -24,10 +24,10 @@ const Services = () => {
       <Box
         ref={componentRef}
         p={"2rem"}
-        w={"100%"}
+        w={{mdDown : '93vw'}}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
-        mb={"3rem"}
+        mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
           <Flex
@@ -63,7 +63,7 @@ const Services = () => {
             </Text>
             <HStack
               w={"100%"}
-              justifyContent={"space-between"}
+              justifyContent={{mdTo2xl : "space-between", mdDown : 'center'}}
               flexWrap={"wrap"}
               gap={"2rem"}
             >
@@ -72,7 +72,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={"47%"}
+                w={{mdTo2xl : "47%"}}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -118,7 +118,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={"47%"}
+                w={{mdTo2xl : "47%"}}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -164,7 +164,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={"47%"}
+                w={{mdTo2xl : "47%"}}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -210,7 +210,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={"47%"}
+                w={{mdTo2xl : "47%"}}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -256,7 +256,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={"47%"}
+                w={{mdTo2xl : "47%"}}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}
@@ -302,7 +302,7 @@ const Services = () => {
                 flexDirection={"column"}
                 gap={"1rem"}
                 border={"1px solid #3d3d3dff"}
-                w={"47%"}
+                w={{mdTo2xl : "47%"}}
                 p={"2rem 1.6rem"}
                 borderRadius={"1rem"}
                 transitionProperty={"border"}

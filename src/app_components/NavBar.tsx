@@ -16,7 +16,6 @@ import { PiToolboxFill } from "react-icons/pi";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaFileAlt } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
-import { FaBlog } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { IoMdShare } from "react-icons/io";
@@ -269,36 +268,6 @@ const NavBar = () => {
             <FaListCheck
               size={"1.3rem"}
               fill={active === "Portfolio" ? "#00BC91" : "white"}
-            />
-          </Box>
-        </Tooltip>
-        <Tooltip
-          showArrow
-          positioning={{ placement: "left" }}
-          contentProps={{
-            css: {
-              "--tooltip-bg": "#212223",
-              p: ".5rem 1rem",
-              position: "relative",
-              right: "-.2rem",
-            },
-          }}
-          content="Blogs"
-        >
-          <Box
-            borderRadius={"50%"}
-            display={"flex"}
-            justifyContent={"center"}
-            alignContent={"center"}
-            p={".5rem"}
-            cursor={"pointer"}
-            _hover={{ bg: "rgba(250,250,250,.2)" }}
-            onMouseEnter={() => setActive("Blog")}
-            onMouseLeave={() => setActive("")}
-          >
-            <FaBlog
-              size={"1.3rem"}
-              fill={active === "Blog" ? "#00BC91" : "white"}
             />
           </Box>
         </Tooltip>

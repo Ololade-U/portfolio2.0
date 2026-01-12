@@ -8,17 +8,17 @@ const About = () => {
   const { componentRef, isInView } = useObserve();
   const setActive = useStoreQuery((s) => s.setActiveNav);
   useEffect(() => {
-        if (isInView) {
-            setActive("About");
-        }
-    }, [isInView, setActive]);
+    if (isInView) {
+      setActive("About");
+    }
+  }, [isInView, setActive]);
 
   return (
     <>
       <Box
         ref={componentRef}
         p={"2rem"}
-        w={"100%"}
+        // w={{mdDown : '93vw'}}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={"3rem"}
@@ -58,7 +58,11 @@ const About = () => {
               solve real-world problems and committed to fostering innovation in
               emerging markets.
             </Text>
-            <HStack justifyContent={"space-between"} color={"#999999"}>
+            <HStack
+              flexWrap={"wrap"}
+              justifyContent={{ mdTo2xl: "space-between" }}
+              color={"#999999"}
+            >
               <Text
                 border={"1px dashed #585858ff"}
                 p={".2rem 1rem"}
@@ -88,9 +92,18 @@ const About = () => {
                 {"Research (85%)"}
               </Text>
             </HStack>
-            <HStack w={"100%"} gap={"5.5rem"} justifyContent={"center"}>
-              <Stack>
-                <Flex w={"24vw"} justifyContent={"space-between"}>
+            <HStack
+              flexDirection={{ mdDown: "column" }}
+              w={"75%"}
+              gap={{ mdTo2xl: "5.5rem" }}
+              justifyContent={{ mdTo2xl: "center" }}
+              alignItems={{ mdDown: "flex-start" }}
+            >
+              <Stack w={"100%"}>
+                <Flex
+                  w={{ mdTo2xl: "24vw", mdDown: "100%" }}
+                  justifyContent={"space-between"}
+                >
                   <Box
                     display={"flex"}
                     w={"40%"}
@@ -112,7 +125,10 @@ const About = () => {
                     {"+(234) 000 0000 000"}
                   </Text>
                 </Flex>
-                <Flex w={"24vw"} justifyContent={"space-between"}>
+                <Flex
+                  w={{ mdTo2xl: "24vw", mdDown: "100%" }}
+                  justifyContent={"space-between"}
+                >
                   <Box
                     display={"flex"}
                     w={"40%"}
@@ -134,7 +150,10 @@ const About = () => {
                     {"+(234) 000 0000 000"}
                   </Text>
                 </Flex>
-                <Flex w={"24vw"} justifyContent={"space-between"}>
+                <Flex
+                  w={{ mdTo2xl: "24vw", mdDown: "100%" }}
+                  justifyContent={"space-between"}
+                >
                   <Box
                     display={"flex"}
                     w={"40%"}
@@ -157,10 +176,10 @@ const About = () => {
                   </Text>
                 </Flex>
               </Stack>
-              <Stack>
+              <Stack w={{ mdDown: "100%" }}>
                 <Flex
                   alignItems={"center"}
-                  w={"25vw"}
+                  w={{ mdTo2xl: "25vw", mdDown: "100%" }}
                   justifyContent={"space-between"}
                 >
                   <Box
@@ -184,7 +203,10 @@ const About = () => {
                     Oscar.Obiora@arravo.co
                   </Text>
                 </Flex>
-                <Flex w={"25vw"} justifyContent={"space-between"}>
+                <Flex
+                  w={{ mdTo2xl: "25vw", mdDown: "100%" }}
+                  justifyContent={"space-between"}
+                >
                   <Box
                     display={"flex"}
                     w={"40%"}
@@ -206,7 +228,10 @@ const About = () => {
                     linkedin.com/in/oscarobiora
                   </Text>
                 </Flex>
-                <Flex w={"25vw"} justifyContent={"space-between"}>
+                <Flex
+                  w={{ mdTo2xl: "25vw", mdDown: "100%" }}
+                  justifyContent={"space-between"}
+                >
                   <Box
                     display={"flex"}
                     w={"40%"}
@@ -230,27 +255,47 @@ const About = () => {
                 </Flex>
               </Stack>
             </HStack>
-            <HStack justifyContent={"space-between"}>
-              <Stack gap={"0"}>
-                <Heading fontSize={"3xl"} fontWeight={"bold"} color={"#00BC91"}>
+            <HStack
+              justifyContent={"space-between"}
+              gap={"2rem"}
+              flexWrap={"wrap"}
+            >
+              <Stack w={{ mdDown: "40%" }} gap={"0"}>
+                <Heading
+                  fontSize={{ mdTo2xl: "3xl", mdDown: "2xl" }}
+                  fontWeight={"bold"}
+                  color={"#00BC91"}
+                >
                   10+
                 </Heading>
                 <Text color={"#999999"}>Years Of Experience</Text>
               </Stack>
-              <Stack gap={"0"}>
-                <Heading fontSize={"3xl"} fontWeight={"bold"} color={"#00BC91"}>
+              <Stack w={{ mdDown: "40%" }} gap={"0"}>
+                <Heading
+                  fontSize={{ mdTo2xl: "3xl", mdDown: "2xl" }}
+                  fontWeight={"bold"}
+                  color={"#00BC91"}
+                >
                   30+
                 </Heading>
                 <Text color={"#999999"}>Handled Projects</Text>
               </Stack>
-              <Stack gap={"0"}>
-                <Heading fontSize={"3xl"} fontWeight={"bold"} color={"#00BC91"}>
+              <Stack w={{ mdDown: "40%" }} gap={"0"}>
+                <Heading
+                  fontSize={{ mdTo2xl: "3xl", mdDown: "2xl" }}
+                  fontWeight={"bold"}
+                  color={"#00BC91"}
+                >
                   100+
                 </Heading>
                 <Text color={"#999999"}>People Trained</Text>
               </Stack>
-              <Stack gap={"0"}>
-                <Heading fontSize={"3xl"} fontWeight={"bold"} color={"#00BC91"}>
+              <Stack w={{ mdDown: "40%" }} gap={"0"}>
+                <Heading
+                  fontSize={{ mdTo2xl: "3xl", mdDown: "2xl" }}
+                  fontWeight={"bold"}
+                  color={"#00BC91"}
+                >
                   20+
                 </Heading>
                 <Text color={"#999999"}>Consultancy Services</Text>

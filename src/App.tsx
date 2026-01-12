@@ -8,14 +8,26 @@ const App = () => {
   return (
     <section className="gen-cont">
       <BackgroundAnimation />
-      <Grid px={"1rem"} h={"100vh"} templateColumns="25vw 1fr 100px" gap="4">
-        <Box h={"100%"}>
+      <Grid
+        h={"100vh"}
+        templateColumns={{ mdTo2xl: "25vw 1fr 100px" }}
+        gap="4"
+        w={{mdDown : '95vw'}}
+      >
+        <Box h={{ mdTo2xl: "100%" }} w={{ mdDown: "100vw" }} px={"1rem"} zIndex={"1000"}>
           <SideBar />
         </Box>
-        <Box zIndex={'1000'} h="100%" pt={'4rem'} overflowY={'auto'} scrollbar={'hidden'}>
-          <MainPage/>
+        <Box
+          zIndex={"1000"}
+          pt={{mdTo2xl : "4rem"}}
+          px={"1rem"}
+          overflowY={{ mdTo2xl: "auto" }}
+          scrollbar={"hidden"}
+          w={{ mdDown: "100vw" }}
+        >
+          <MainPage />
         </Box>
-        <Box zIndex={'2500'} h="100%">
+        <Box hideBelow={"md"} zIndex={"2500"} h="100%">
           <NavBar />
         </Box>
       </Grid>

@@ -31,10 +31,11 @@ const Intro = () => {
       <Box
         ref={componentRef}
         p={"2rem"}
-        w={"100%"}
+        // w={{mdDown : '93vw'}}
+        // mx={{mdDown : '1rem'}}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
-        mb={"3rem"}
+        mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
       >
         <Stack alignItems={"flex-start"} gap={"1.5rem"}>
           <Flex
@@ -72,7 +73,7 @@ const Intro = () => {
                   Dreams to Reality
                 </Heading>{" "}
               </Heading>
-              <Text color={"#999999"} maxW={"40ch"}>
+              <Text color={"#999999"} maxW={{mdTo2xl : "40ch"}}>
                 Welcome to the official website of Oscar Obiora, a
                 multidisciplinary specialist in project management, strategic
                 planning, entrepreneurship, business strategy and IT
@@ -99,7 +100,13 @@ const Intro = () => {
                 LET'S TALK
               </Button>
             </Flex>
-            <Image borderRadius={"3rem"} w={"23vw"} src={myPic} h={"60vh"} />
+            <Image
+              hideBelow={"md"}
+              borderRadius={"3rem"}
+              w={"23vw"}
+              src={myPic}
+              h={"60vh"}
+            />
           </HStack>
         </Stack>
       </Box>
