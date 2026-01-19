@@ -27,6 +27,8 @@
   animation: menuOpen 0.3s forwards;
 }
 
+
+
 @keyframes menuOpen {
   100% {
     left: 0;
