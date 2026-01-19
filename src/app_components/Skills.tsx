@@ -46,7 +46,7 @@ const Skills: React.FC<SkillsProps> = () => {
   const skillItemRef: RefObject<HTMLDivElement | null> =
     useRef<HTMLDivElement | null>(null);
 
-  const scrollDistance: number = 320;
+  const scrollDistance: number = 310;
 
   useEffect(() => {
     if (scrollViewportRef.current && skillItemRef.current) {
