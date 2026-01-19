@@ -55,7 +55,7 @@ const Services = () => {
                 Services
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={"1.1rem"}>
+            <Text color={"#999999"} fontSize={{mdTo2xl : "1.1rem", mdDown : '1rem'}}>
               Your business deserves solutions that are as unique and dynamic as
               your vision. I offer a wide range of services designed to meet the
               diverse needs of my clients, from creative design to technical
@@ -93,7 +93,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 1 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={"7xl"}
+                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
                   >
                     01
                   </Heading>
@@ -103,7 +103,7 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={"2xl"}>
+                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
                   Project Management
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
@@ -139,7 +139,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 2 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={"7xl"}
+                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
                   >
                     02
                   </Heading>
@@ -149,7 +149,7 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={"2xl"}>
+                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
                   Microsoft Office
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
@@ -185,7 +185,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 3 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={"7xl"}
+                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
                   >
                     03
                   </Heading>
@@ -195,7 +195,7 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={"2xl"}>
+                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
                   Strategic Planning
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
@@ -231,7 +231,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 4 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={"7xl"}
+                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
                   >
                     04
                   </Heading>
@@ -241,7 +241,7 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={"2xl"}>
+                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
                   Management
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
@@ -277,7 +277,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 5 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={"7xl"}
+                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
                   >
                     05
                   </Heading>
@@ -287,7 +287,7 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={"2xl"}>
+                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
                   Entrepreneurship
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>
@@ -323,7 +323,7 @@ const Services = () => {
                     WebkitTextStroke={
                       active == 6 ? "1.5px white" : "1.5px #606060ff"
                     }
-                    fontSize={"7xl"}
+                    fontSize={{mdTo2xl : "7xl", mdDown : "5xl"}}
                   >
                     06
                   </Heading>
@@ -333,7 +333,7 @@ const Services = () => {
                     fill="#00BC91"
                   />
                 </Flex>
-                <Heading color={"white"} fontSize={"2xl"}>
+                <Heading color={"white"} fontSize={{mdTo2xl : "2xl", mdDown : "xl"}}>
                   Business Strategy
                 </Heading>
                 <Text color={"#999999"} fontSize={"17px"}>

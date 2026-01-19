@@ -1,4 +1,5 @@
 import About from "./About";
+import Contact from "./Contact";
 import Intro from "./Intro";
 import Resume from "./Resume";
 import Services from "./Services";
@@ -11,7 +12,8 @@ const MainPage = () => {
       <About />
       <Services />
       <Skills />
-      {/* <Resume /> */}
+      <Resume />
+      <Contact />
     </>
   );
 };

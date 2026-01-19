@@ -95,6 +95,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Home"
@@ -126,6 +127,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="About"
@@ -157,6 +159,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Service"
@@ -188,6 +191,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Skills"
@@ -219,6 +223,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Resume"
@@ -250,6 +255,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Portfolio"
@@ -280,6 +286,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Testimonials"
@@ -310,6 +317,7 @@ const NavBar = () => {
               p: ".5rem 1rem",
               position: "relative",
               right: "-.2rem",
+              color: "white",
             },
           }}
           content="Contact"

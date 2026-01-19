@@ -49,7 +49,7 @@ const About = () => {
                 Me
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={"1.1rem"}>
+            <Text color={"#999999"} fontSize={{mdTo2xl : "1.1rem", mdDown : '1rem'}}>
               Seasoned business professional with over a decade years of
               experience in co-founding and scaling startups across EdTech,
               AgriTech, and FinTech sectors. Proven track record in driving
@@ -94,9 +94,9 @@ const About = () => {
             </HStack>
             <HStack
               flexDirection={{ mdDown: "column" }}
-              w={"75%"}
+              w={{mdTo2xl : "75%", mdDown : "100%"}}
               gap={{ mdTo2xl: "5.5rem" }}
-              justifyContent={{ mdTo2xl: "center" }}
+              // justifyContent={{ mdTo2xl: "center" }}
               alignItems={{ mdDown: "flex-start" }}
             >
               <Stack w={"100%"}>
@@ -109,7 +109,7 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={".9rem"} color={"#999999"}>
+                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
                       Phone
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -117,10 +117,11 @@ const About = () => {
                     </Text>
                   </Box>
                   <Text
-                    fontSize={".9rem"}
+                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
                     w={"50%"}
                     textAlign={"left"}
                     color={"white"}
+                    // minW={'22ch'}
                   >
                     {"+(234) 000 0000 000"}
                   </Text>
@@ -134,7 +135,7 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={".9rem"} color={"#999999"}>
+                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
                       WhatsApp
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -142,7 +143,7 @@ const About = () => {
                     </Text>
                   </Box>
                   <Text
-                    fontSize={".9rem"}
+                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
                     w={"50%"}
                     textAlign={"left"}
                     color={"white"}
@@ -159,7 +160,7 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={".9rem"} color={"#999999"}>
+                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
                       Language
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -187,7 +188,7 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={".9rem"} color={"#999999"}>
+                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
                       Email
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -195,10 +196,11 @@ const About = () => {
                     </Text>
                   </Box>
                   <Text
-                    fontSize={".8rem"}
+                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
                     w={"50%"}
                     textAlign={"left"}
                     color={"white"}
+                    textWrap={'nowrap'}
                   >
                     Oscar.Obiora@arravo.co
                   </Text>
@@ -212,7 +214,7 @@ const About = () => {
                     w={"40%"}
                     justifyContent={"space-between"}
                   >
-                    <Text fontSize={".9rem"} color={"#999999"}>
+                    <Text fontSize={{mdTo2xl : ".9rem", mdDown : '.8rem'}} color={"#999999"}>
                       LinkedIn
                     </Text>
                     <Text fontSize={".9rem"} color={"#999999"}>
@@ -220,10 +222,11 @@ const About = () => {
                     </Text>
                   </Box>
                   <Text
-                    fontSize={".8rem"}
+                    fontSize={{mdTo2xl : ".9rem", mdDown : '.7rem'}}
                     w={"50%"}
                     textAlign={"left"}
                     color={"white"}
+                    textWrap={'nowrap'}
                   >
                     linkedin.com/in/oscarobiora
                   </Text>

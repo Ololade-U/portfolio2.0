@@ -90,11 +90,13 @@ const Intro = () => {
                 </Flex>
               </HStack>
               <Button
-                fontSize={"1.1rem"}
+                fontSize={{mdTo2xl : "1.1rem", mdDown : '.9rem'}}
                 w={"50%"}
                 bg={"#00BC91"}
-                py={"1.8rem"}
+                py={{mdTo2xl :"1.8rem", mdDown : '1.2rem'}}
+                px={{mdTo2xl : '.5rem', mdDown : '1rem'}}
                 borderRadius={"2rem"}
+                color={'white'}
               >
                 <FaTelegramPlane size={"1.3rem"} fill="white" />
                 LET'S TALK

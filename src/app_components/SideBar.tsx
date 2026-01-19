@@ -78,7 +78,7 @@ const SideBar = () => {
           </Flex>
         </Box>
         <Box
-          p={"1rem 1rem .2rem"}
+          p={"1rem 0rem .2rem"}
           w={"93%"}
           borderRadius={"1rem"}
           bg={"#2D2E2F"}
@@ -87,10 +87,10 @@ const SideBar = () => {
           flexDirection={"column"}
           gap={".5rem"}
         >
-          <Heading fontSize={"md"} color={"white"}>
+          <Heading pl={'1rem'} fontSize={"md"} color={"white"}>
             Skills
           </Heading>
-          <HStack justifyContent={"space-between"}>
+          <HStack justifyContent={"flex-start"}>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root
                 borderRadius={"50%"}
