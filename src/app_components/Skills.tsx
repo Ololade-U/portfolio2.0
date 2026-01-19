@@ -46,7 +46,7 @@ const Skills: React.FC<SkillsProps> = () => {
   const skillItemRef: RefObject<HTMLDivElement | null> =
     useRef<HTMLDivElement | null>(null);
 
-  const scrollDistance: number = 220;
+  const scrollDistance: number = 320;
 
   useEffect(() => {
     if (scrollViewportRef.current && skillItemRef.current) {
@@ -228,6 +228,7 @@ const Skills: React.FC<SkillsProps> = () => {
                     mt={"2rem"}
                     width="max-content"
                     gap="10px"
+                    justifyContent={'center'}
                   >
                     {skillData.map((skill, index) => {
                       const IconComponent = skill.icon;
@@ -235,7 +236,7 @@ const Skills: React.FC<SkillsProps> = () => {
                         <Flex
                           ref={index === 0 ? skillItemRef : null}
                           key={skill.name}
-                          minW={{mdTo2xl : "170px", mdDown : '200px'}}
+                          minW={{mdTo2xl : "170px", mdDown : '300px'}}
                           flexDirection={"column"}
                           gap={"4rem"}
                           alignItems={"center"}
@@ -249,7 +250,7 @@ const Skills: React.FC<SkillsProps> = () => {
                             colorPalette={"green"}
                           >
                             <ProgressCircle.Circle
-                              scale={"2.5"}
+                              scale={"2"}
                               css={{ "--thickness": "1px" }}
                             >
                               <ProgressCircle.Track />

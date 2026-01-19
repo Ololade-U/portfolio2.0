@@ -194,7 +194,7 @@ const Resume = () => {
             {WorkExperienceData.map((item, index) => (
               <Box
                 key={`work-${index}`}
-                border={"1px solid #999999"}
+                border={"1px solid rgba(62, 62, 62, 0.95)"}
                 w={"100%"}
                 p={"1rem .5rem"}
                 borderRadius={".6rem"}
@@ -247,7 +247,7 @@ const Resume = () => {
             {EducationData.map((item, index) => (
               <Box
                 key={`work-${index}`}
-                border={"1px solid #999999"}
+                border={"1px solid rgba(62, 62, 62, 0.95)"}
                 w={"100%"}
                 p={"1rem .5rem"}
                 borderRadius={".6rem"}

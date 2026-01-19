@@ -90,7 +90,7 @@ const SideBar = () => {
           <Heading pl={'1rem'} fontSize={"md"} color={"white"}>
             Skills
           </Heading>
-          <HStack justifyContent={"flex-start"}>
+          <HStack justifyContent={"space-between"} px={'.5rem'}>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root
                 borderRadius={"50%"}

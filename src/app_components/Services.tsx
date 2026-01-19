@@ -23,7 +23,7 @@ const Services = () => {
     <>
       <Box
         ref={componentRef}
-        p={"2rem"}
+        p={"2rem 1rem"}
         w={{mdDown : '93vw'}}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
