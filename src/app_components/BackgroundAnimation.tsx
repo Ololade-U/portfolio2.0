@@ -12,7 +12,6 @@ const BackgroundAnimation = () => {
 
   useEffect(() => {
     let animationFrameId: number;
-    let animationFrameId2: number;
 
     const animateBall2 = () => {
       setBallY2((prevY) => {
@@ -30,9 +29,9 @@ const BackgroundAnimation = () => {
         return newY;
       });
 
-      animationFrameId2 = requestAnimationFrame(animateBall2);
+      animationFrameId = requestAnimationFrame(animateBall2);
     };
-    animationFrameId2 = requestAnimationFrame(animateBall2);
+    animationFrameId = requestAnimationFrame(animateBall2);
 
     
 
