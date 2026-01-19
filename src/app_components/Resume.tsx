@@ -7,6 +7,7 @@ import {
   Text,
   Timeline,
   Tag,
+  HStack,
 } from "@chakra-ui/react";
 import { FaFileAlt } from "react-icons/fa";
 import useStoreQuery from "./Store";
@@ -26,28 +27,28 @@ const WorkExperienceData: IWorkExperience[] = [
   {
     title: "Senior Business Manager and Head of Arravo Academy",
     companyOrInstitution: "Arravo Technologies",
-    dateRange: "Aug, 2024 - Present",
+    dateRange: "Aug,2024-Present",
     description:
       "Business development, strategy and planning, operational management, financial Management as well as customer focus and compliance and risk management.",
   },
   {
     title: "CEO / Co-Founder",
     companyOrInstitution: "Edupoint Limited",
-    dateRange: "Feb, 2018 - Present",
+    dateRange: "Feb,2018-Present",
     description:
       "Led business development and marketing strategies, achieving a 40% increase in sales within a year. Onboarded over 35,000 learners and secured B2B partneships (Private-Private Partnerships and Private-Public Partnerships)",
   },
   {
     title: "CEO / Co-Founder",
     companyOrInstitution: "The AgroBarn Limited",
-    dateRange: "Jul, 2016-2024",
+    dateRange: "Jul,2016-2024",
     description:
       "Managed over 10+ employees in the agribusiness operations. Achieved 95% of sales targets, steering the company from startup to a profitable venture within two years.",
   },
   {
     title: "Co-Founder / Managing Partner",
     companyOrInstitution: "Growth Capital Group",
-    dateRange: "Jan, 2020-2024",
+    dateRange: "Jan,2020-2024",
     description:
       "Driving the vision and strategy of Growth Capital Group with a focus on connecting western technologies to emerging markets, using SaaS models.",
   },
@@ -69,7 +70,7 @@ const EducationData: IEducation[] = [
   {
     title: "Animal and Environmental Biology",
     companyOrInstitution: "University of Benin",
-    dateRange: "2011 - 2015",
+    dateRange: "2011-2015",
     description: "Bachelor's Degree",
   },
 ];
@@ -146,8 +147,8 @@ const Resume = () => {
     <>
       <Box
         ref={componentRef}
-        p={"2rem"}
-        w={{mdDown : "100vw"}}
+        p={"2rem .9rem"}
+        // w={{ mdDown: "100vw" }}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={"3rem"}
@@ -171,19 +172,49 @@ const Resume = () => {
               color={"white"}
               display={"flex"}
               gap={".4rem"}
-              fontSize={"4xl"}
+              fontSize={{ mdTo2xl: "4xl", mdDown: "3xl" }}
             >
               Work{" "}
-              <Heading fontSize={"4xl"} fontWeight={"bold"} color={"#00BC91"}>
+              <Heading
+                fontSize={{ mdTo2xl: "4xl", mdDown: "3xl" }}
+                fontWeight={"bold"}
+                color={"#00BC91"}
+              >
                 Experience
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={"1.1rem"}>
+            <Text
+              color={"#999999"}
+              fontSize={{ mdTo2xl: "1.1rem", mdDown: ".9rem" }}
+            >
               My professional journey has been shaped by a diverse range of
               roles and projects, each contributing to my expertise in design,
               development, and IT consultancy.
             </Text>
-            <Timeline.Root colorPalette="teal" size="md">
+            {WorkExperienceData.map((item, index) => (
+              <Box
+                key={`work-${index}`}
+                border={"1px solid #999999"}
+                w={"100%"}
+                p={"1rem .5rem"}
+                borderRadius={".6rem"}
+                display={'flex'}
+                flexDirection={'column'}
+                gap={'1rem'}
+                hideFrom={'md'}
+              >
+                <HStack
+                  fontSize={".9rem"}
+                  justifyContent={"space-between"}
+                >
+                  <Text fontWeight={"bold"}>{item.companyOrInstitution}</Text>
+                  <Text color={"#999999"}>{item.dateRange}</Text>
+                </HStack>
+                <Heading>{item.title}</Heading>
+                <Text fontSize={'.9rem'} color={"#999999"}>{item.description}</Text>
+              </Box>
+            ))}
+            <Timeline.Root hideBelow={"md"} colorPalette="teal" size="md">
               {WorkExperienceData.map((item, index) => (
                 <TimelineResumeItem key={`work-${index}`} {...item} />
               ))}
@@ -195,18 +226,48 @@ const Resume = () => {
               color={"white"}
               display={"flex"}
               gap={".4rem"}
-              fontSize={"4xl"}
+              fontSize={{ mdTo2xl: "4xl", mdDown: "3xl" }}
             >
               My{" "}
-              <Heading fontSize={"4xl"} fontWeight={"bold"} color={"#00BC91"}>
+              <Heading
+                fontSize={{ mdTo2xl: "4xl", mdDown: "3xl" }}
+                fontWeight={"bold"}
+                color={"#00BC91"}
+              >
                 Education
               </Heading>
             </Heading>
-            <Text color={"#999999"} fontSize={"1.1rem"}>
+            <Text
+              color={"#999999"}
+              fontSize={{ mdTo2xl: "1.1rem", mdDown: ".9rem" }}
+            >
               A good educational foundation has been instrumental in shaping my
               expertise and driving my career forward.
             </Text>
-            <Timeline.Root colorPalette="teal" size="md">
+            {EducationData.map((item, index) => (
+              <Box
+                key={`work-${index}`}
+                border={"1px solid #999999"}
+                w={"100%"}
+                p={"1rem .5rem"}
+                borderRadius={".6rem"}
+                display={'flex'}
+                flexDirection={'column'}
+                gap={'1rem'}
+                hideFrom={'md'}
+              >
+                <HStack
+                  fontSize={".9rem"}
+                  justifyContent={"space-between"}
+                >
+                  <Text fontWeight={"bold"}>{item.companyOrInstitution}</Text>
+                  <Text color={"#999999"}>{item.dateRange}</Text>
+                </HStack>
+                <Heading>{item.title}</Heading>
+                <Text fontSize={'.9rem'} color={"#999999"}>{item.description}</Text>
+              </Box>
+            ))}
+            <Timeline.Root hideBelow={"md"} colorPalette="teal" size="md">
               {EducationData.map((item, index) => (
                 <TimelineResumeItem key={`work-${index}`} {...item} />
               ))}

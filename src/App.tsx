@@ -7,13 +7,14 @@ import MainPage from "./app_components/MainPage";
 const App = () => {
   return (
     <section className="gen-cont">
-      <BackgroundAnimation />
       <Grid
         h={"100vh"}
-        templateColumns={{ mdTo2xl: "25vw 1fr 100px" }}
+        templateColumns={{ mdTo2xl: "25vw 1fr 100px", mdDown: "1fr" }}
         gap="4"
         w={{mdDown : '95vw'}}
+        position={'relative'}
       >
+      <BackgroundAnimation />
         <Box h={{ mdTo2xl: "100%" }} w={{ mdDown: "100vw" }} px={"1rem"} zIndex={"1000"}>
           <SideBar />
         </Box>

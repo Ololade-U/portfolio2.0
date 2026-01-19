@@ -11,7 +11,7 @@
 
 .dotted-line {
   position: absolute;
-  left: 40%;
+  left: 30%;
   transform: translateX(-50%);
   width: 1px;
   height: 100%;
@@ -42,7 +42,7 @@
 }
 .dotted-line3 {
   position: absolute;
-  left: 80%;
+  left: 90%;
   transform: translateX(-50%);
   width: 1px;
   height: 100%;
@@ -58,7 +58,7 @@
 
 .moving-ball {
   position: absolute;
-  left: 40%;
+  left: 30%;
   transform: translateX(-50%);
   border-radius: 50%;
   background-color: #00bc91;
@@ -75,7 +75,7 @@
 }
 .moving-ball3 {
   position: absolute;
-  left: 80%;
+  left: 90%;
   transform: translateX(-50%);
   border-radius: 50%;
   background-color: #00bc91;

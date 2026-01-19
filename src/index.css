@@ -6,7 +6,7 @@
 
 .gen-cont {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: #18191A;
   z-index: -1000;
   overflow-y: scroll;

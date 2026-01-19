@@ -72,6 +72,8 @@ const Contact = () => {
               w={"100%"}
               display={"flex"}
               justifyContent={"space-between"}
+              flexDirection={{mdDown :'column'}}
+              gap={'2rem'}
             >
               <Stack w={"100%"} gap={"2rem"}>
                 <Flex alignItems={"center"} gap={"1rem"}>
@@ -102,9 +104,9 @@ const Contact = () => {
                   </Stack>
                 </Flex>
               </Stack>
-              <Stack gap={"2rem"} w={"100%"} justifyContent={"space-between"}>
+              <Stack gap={{mdTo2xl : "2rem", mdDown : '1rem'}} w={"100%"} justifyContent={"space-between"}>
                 <Flex>
-                  <Fieldset.Root size={"lg"} w={"30vw"}>
+                  <Fieldset.Root size={"lg"} w={{mdTo2xl :"30vw"}}>
                     <Fieldset.Content>
                       <Field.Root>
                         <Input
@@ -119,7 +121,7 @@ const Contact = () => {
                   </Fieldset.Root>
                 </Flex>
                 <Flex>
-                  <Fieldset.Root size={"lg"} w={"30vw"}>
+                  <Fieldset.Root size={"lg"} w={{mdTo2xl :"30vw"}}>
                     <Fieldset.Content>
                       <Field.Root>
                         <Input
@@ -134,7 +136,7 @@ const Contact = () => {
                   </Fieldset.Root>
                 </Flex>
                 <Flex>
-                  <Fieldset.Root size={"lg"} w={"30vw"}>
+                  <Fieldset.Root size={"lg"} w={{mdTo2xl :"30vw"}}>
                     <Fieldset.Content>
                       <Field.Root>
                         <Textarea
@@ -151,7 +153,7 @@ const Contact = () => {
                 </Flex>
                 <Button
                   p={"1.8rem 1.6rem"}
-                  fontSize={"1.2rem"}
+                  fontSize={{mdTo2xl : "1.2rem", mdDown : '1rem'}}
                   fontWeight={"initial"}
                   borderRadius={"2rem"}
                   bg={"#00BC91"}
