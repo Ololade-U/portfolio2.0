@@ -18,12 +18,14 @@ const SideBar = () => {
   return (
     <>
       <Stack
-        // w={{mdDown : '93vw'}}
         h={"100%"}
         alignItems={"center"}
         bg={"#212223"}
         p={".5rem 0"}
         pos={'relative'}
+        top={{mdDown : '15vh'}}
+        borderRadius={'1rem'}
+        mb={{mdDown : '5rem'}}
       >
         <Flex
           mb={"1rem"}

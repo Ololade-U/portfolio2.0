@@ -23,5 +23,12 @@
   transition: transform 0.2s linear;
 }
 
+.openMenu{
+  animation: menuOpen 0.3s forwards;
+}
 
-
+@keyframes menuOpen {
+  100% {
+    left: 0;
+  }
+}
