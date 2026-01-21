@@ -171,7 +171,13 @@ const Contact = () => {
           </Flex>
         </Stack>
       </Box>
-      <Text fontSize={{mdTo2xl : '1.1rem'}} mb={'1.5rem'} textWrap={"nowrap"} color={"#999999"}>
+      <Text
+        textAlign={"center"}
+        fontSize={{ mdTo2xl: "1.1rem" }}
+        mb={"1.5rem"}
+        textWrap={"nowrap"}
+        color={"#999999"}
+      >
         &copy; 2026 Oscar Obiora. All rights reserved.
       </Text>
     </>

@@ -29,7 +29,7 @@ const App = () => {
           zIndex={"1000"}
           pt={{ mdTo2xl: "4rem" }}
           px={"1rem"}
-          overflowY={{ mdTo2xl: "auto" }}
+          overflowY={{ mdTo2xl: "auto"}}
           scrollbar={"hidden"}
           w={{ mdDown: "100vw" }}
         >
