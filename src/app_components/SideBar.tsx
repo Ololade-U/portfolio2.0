@@ -18,14 +18,13 @@ const SideBar = () => {
   return (
     <>
       <Stack
-        h={"100%"}
+        h={{mdTo2xl : "100%"}}
         alignItems={"center"}
         bg={"#212223"}
-        p={".5rem 0"}
-        pos={'relative'}
+        p={{mdTo2xl : ".5rem 0", mdDown : "1.5rem 0"}}
+        position={'relative'}
         top={{mdDown : '15vh'}}
         borderRadius={'1rem'}
-        mb={{mdDown : '5rem'}}
         id="home"
       >
         <Flex
@@ -81,19 +80,19 @@ const SideBar = () => {
           </Flex>
         </Box>
         <Box
-          p={"1rem 0rem .2rem"}
+          p={{mdTo2xl : "1rem 0rem .2rem", mdDown : "1rem 0rem 1rem"}}
           w={"93%"}
           borderRadius={"1rem"}
           bg={"#2D2E2F"}
           h={"100%"}
           display={"flex"}
           flexDirection={"column"}
-          gap={".5rem"}
+          gap={'.5rem'}
         >
           <Heading pl={'1rem'} fontSize={"md"} color={"white"}>
             Skills
           </Heading>
-          <HStack justifyContent={"space-between"} px={'.5rem'}>
+          <HStack mb={{mdDown : '2rem'}} justifyContent={"space-between"} px={'.5rem'}>
             <Stack alignItems={"center"} gap={".5rem"}>
               <ProgressCircle.Root
                 borderRadius={"50%"}

@@ -14,13 +14,14 @@ const App = () => {
         h={"100vh"}
         templateColumns={{ mdTo2xl: "25vw 1fr 100px", mdDown: "1fr" }}
         gap="4"
-        w={{ mdDown: "95vw" }}
+        w={{ mdDown: "100vw" }}
       >
         <Box
           h={{ mdTo2xl: "100%" }}
           w={{ mdDown: "100vw" }}
           px={"1rem"}
           zIndex={"1000"}
+          mb={{ mdDown: "7rem" }}
         >
           <SideBar />
         </Box>

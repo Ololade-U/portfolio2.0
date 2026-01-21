@@ -37,6 +37,7 @@ const Intro = () => {
         borderRadius={"1.6rem"}
         mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
         id="intro"
+        position={'relative'}
       >
         <Stack alignItems={"flex-start"} gap={"1.5rem"}>
           <Flex
