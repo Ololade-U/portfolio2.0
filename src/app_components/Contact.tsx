@@ -34,7 +34,8 @@ const Contact = () => {
         w={"100%"}
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
-        mb={"3rem"}
+        mb={"1.5rem"}
+        id="contact"
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
           <Flex
@@ -72,8 +73,8 @@ const Contact = () => {
               w={"100%"}
               display={"flex"}
               justifyContent={"space-between"}
-              flexDirection={{mdDown :'column'}}
-              gap={'2rem'}
+              flexDirection={{ mdDown: "column" }}
+              gap={"2rem"}
             >
               <Stack w={"100%"} gap={"2rem"}>
                 <Flex alignItems={"center"} gap={"1rem"}>
@@ -104,9 +105,13 @@ const Contact = () => {
                   </Stack>
                 </Flex>
               </Stack>
-              <Stack gap={{mdTo2xl : "2rem", mdDown : '1rem'}} w={"100%"} justifyContent={"space-between"}>
+              <Stack
+                gap={{ mdTo2xl: "2rem", mdDown: "1rem" }}
+                w={"100%"}
+                justifyContent={"space-between"}
+              >
                 <Flex>
-                  <Fieldset.Root size={"lg"} w={{mdTo2xl :"30vw"}}>
+                  <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
                     <Fieldset.Content>
                       <Field.Root>
                         <Input
@@ -114,14 +119,14 @@ const Contact = () => {
                           color={"white"}
                           name="name"
                           placeholder="Name"
-                          pl={'.5rem'}
+                          pl={".5rem"}
                         />
                       </Field.Root>
                     </Fieldset.Content>
                   </Fieldset.Root>
                 </Flex>
                 <Flex>
-                  <Fieldset.Root size={"lg"} w={{mdTo2xl :"30vw"}}>
+                  <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
                     <Fieldset.Content>
                       <Field.Root>
                         <Input
@@ -129,14 +134,14 @@ const Contact = () => {
                           color={"white"}
                           name="name"
                           placeholder="E-mail"
-                          pl={'.5rem'}
+                          pl={".5rem"}
                         />
                       </Field.Root>
                     </Fieldset.Content>
                   </Fieldset.Root>
                 </Flex>
                 <Flex>
-                  <Fieldset.Root size={"lg"} w={{mdTo2xl :"30vw"}}>
+                  <Fieldset.Root size={"lg"} w={{ mdTo2xl: "30vw" }}>
                     <Fieldset.Content>
                       <Field.Root>
                         <Textarea
@@ -145,15 +150,15 @@ const Contact = () => {
                           color={"white"}
                           name="name"
                           placeholder="Message"
-                          p={'.5rem'}
+                          p={".5rem"}
                         />
                       </Field.Root>
                     </Fieldset.Content>
                   </Fieldset.Root>
                 </Flex>
                 <Button
-                  p={"1.8rem 1.6rem"}
-                  fontSize={{mdTo2xl : "1.2rem", mdDown : '1rem'}}
+                  p={{ mdTo2xl: "1.8rem 1.6rem", mdDown: "1rem 1.2rem" }}
+                  fontSize={{ mdTo2xl: "1.2rem", mdDown: "1rem" }}
                   fontWeight={"initial"}
                   borderRadius={"2rem"}
                   bg={"#00BC91"}
@@ -166,6 +171,9 @@ const Contact = () => {
           </Flex>
         </Stack>
       </Box>
+      <Text fontSize={{mdTo2xl : '1.1rem'}} mb={'1.5rem'} textWrap={"nowrap"} color={"#999999"}>
+        &copy; 2026 Oscar Obiora. All rights reserved.
+      </Text>
     </>
   );
 };

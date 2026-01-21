@@ -106,6 +106,7 @@ const Skills: React.FC<SkillsProps> = () => {
         borderRadius={"1.6rem"}
         mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
         overflowX={"hidden"}
+        id="skills"
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
           <Flex

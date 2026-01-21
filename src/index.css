@@ -9,7 +9,7 @@
   width: 100vw;
   background-color: #18191A;
   z-index: -1000;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 

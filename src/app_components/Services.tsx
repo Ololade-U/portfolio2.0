@@ -28,6 +28,7 @@ const Services = () => {
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={{mdTo2xl :"3rem", mdDown : '1.5rem'}}
+        id="services"
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
           <Flex

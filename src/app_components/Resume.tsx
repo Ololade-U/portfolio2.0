@@ -152,6 +152,7 @@ const Resume = () => {
         bg={"rgba(33, 34, 35, .95)"}
         borderRadius={"1.6rem"}
         mb={"3rem"}
+        id="resume"
       >
         <Stack alignItems={"flex-start"} gap={"2rem"}>
           <Flex

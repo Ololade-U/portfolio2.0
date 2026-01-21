@@ -26,6 +26,7 @@ const SideBar = () => {
         top={{mdDown : '15vh'}}
         borderRadius={'1rem'}
         mb={{mdDown : '5rem'}}
+        id="home"
       >
         <Flex
           mb={"1rem"}
